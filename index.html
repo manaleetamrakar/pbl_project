@@ -64,11 +64,15 @@
             <div class="space-y-6">
                 <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
                     <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review / Market Research</h3>
-                    <p class="text-sm text-slate-500 italic">Summary of existing solutions or research papers analyzed.</p>
+                    <p class="text-sm text-slate-500 italic"> Existing research in federated learning focuses on privacy-preserving model training using decentralized data.
+    Prior approaches rely on manual or grid-based hyperparameter tuning, which is computationally expensive and
+    does not scale well across heterogeneous client environments.</p>
                 </div>
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
                     <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Research Gap / Innovation</h3>
-                    <p class="text-sm text-slate-500 italic">What makes your approach different or better than the State-of-the-Art?</p>
+                    <p class="text-sm text-slate-500 italic"> Most existing methods lack adaptability to client heterogeneity and incur high tuning overhead.
+    Our approach introduces meta-learning to dynamically optimize hyperparameters across training rounds,
+    reducing manual intervention and improving convergence efficiency.</p>
                 </div>
             </div>
         </section>
@@ -79,12 +83,16 @@
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
-                    <p class="text-sm text-slate-500">[Source, size, and preprocessing details]</p>
+                    <p class="text-sm text-slate-500">The model is trained on the EMNIST dataset, with an automatic fallback to MNIST for robustness.
+    The dataset consists of grayscale 28×28 handwritten digit images, normalized and split into
+    training and testing sets.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
-                    <p class="text-sm text-slate-500">[Algorithms used or System Workflow]</p>
+                    <p class="text-sm text-slate-500"> A neural network model is trained using federated learning principles.
+    Meta-learning techniques guide hyperparameter updates such as learning rate and batch size
+    across training rounds to improve overall model performance.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
                     <i class="fab fa-python text-green-500 text-3xl mb-4"></i>
@@ -101,9 +109,10 @@
                 <div class="space-y-6">
                     <div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
                         <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Accuracy / Performance</span>
-                        <span class="text-blue-400 font-mono font-black text-3xl">XX.X%</span>
+                        <span class="text-blue-400 font-mono font-black text-3xl">90-92%</span>
                     </div>
-                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed">Quantifiable outcomes and evaluation metrics compared to baselines.</p>
+                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed"> Experimental results indicate improved convergence speed and accuracy compared to
+    traditional centralized hyperparameter tuning approaches.</p>
                 </div>
             </div>
         </section>
@@ -113,12 +122,12 @@
             <div class="flex flex-wrap justify-center gap-10">
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
                     <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Project Guide</p>
-                    <p class="font-black text-xl text-slate-100">[Mr. Mohit Kushwaha]</p>
+                    <p class="font-black text-xl text-slate-100">Mr. Mohit Kushwaha</p>
                 </div>
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
                     <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Team Member 1</p>
-                    <p class="font-black text-xl text-slate-100">[Manalee Tamrakar]</p>
-                    <p class="text-[10px] text-slate-500 mt-1">[23FE10CSE00507]</p>
+                    <p class="font-black text-xl text-slate-100">Manalee Tamrakar</p>
+                    <p class="text-[10px] text-slate-500 mt-1">23FE10CSE00507</p>
                 </div>
             </div>
         </section>
