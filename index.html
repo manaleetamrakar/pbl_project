@@ -4,110 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PBL Presentation | 2026</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        #timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #timerContainer {
+            background: #ffffff;
+            color: #020617;
+            border: 3px solid #3b82f6;
+        }
     </style>
 </head>
+
 <body onload="startTimer()">
 
+<!-- TIMER -->
 <div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4">
     <i class="fas fa-hourglass-start text-blue-600 text-2xl"></i>
     <span id="displayTime" class="text-4xl font-black font-mono">00:00</span>
 </div>
 
+<!-- NAVBAR -->
 <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
     <div class="flex items-center gap-4">
-        <div class="bg-white p-1 rounded shadow-md" style="height: 48px; width: 48px;">
-            <img src="muj-logo.png" class="h-full w-auto object-contain">
+        <div class="bg-white p-1 rounded shadow-md" style="height:48px;width:48px;">
+            <img src="muj-logo.png" class="h-full object-contain">
         </div>
         <div>
             <span class="text-xl font-black">PBL <span class="text-blue-500 italic">2026</span></span>
-            <div class="text-[9px] text-slate-400 uppercase">Dept. of CSE</div>
+            <div class="text-xs text-slate-400">Dept. of CSE</div>
         </div>
+    </div>
+
+    <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest font-bold">
+        <a href="#problem">Problem</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#results">Results</a>
+        <a href="#team">Team</a>
     </div>
 </nav>
 
 <main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
 
+<!-- TITLE -->
 <section class="text-center">
     <div class="text-xs text-slate-500 mb-4">ID: 23FE10CSE00507</div>
-    <h1 class="text-6xl font-extrabold gradient-text">Intelligent Hyperparameter Optimizer</h1>
-    <p class="text-slate-400 mt-6 max-w-2xl mx-auto italic">
-        A full-stack system that dynamically optimizes ML hyperparameters based on hardware to prevent crashes and improve efficiency.
+
+    <h1 class="text-6xl font-extrabold gradient-text">
+        Intelligent Hyperparameter Optimizer
+    </h1>
+
+    <p class="text-slate-400 mt-6 max-w-2xl mx-auto italic border-l-2 border-blue-500 pl-6 text-left">
+        This project presents a system that dynamically optimizes machine learning hyperparameters based on hardware capabilities, ensuring efficient, stable, and crash-free training.
     </p>
 </section>
 
+<!-- PROBLEM -->
 <section id="problem" class="grid md:grid-cols-2 gap-12">
-    <div class="glass p-8 rounded-3xl">
-        <h2 class="text-2xl font-bold mb-4">Problem</h2>
-        <p class="text-slate-400">
-            ML training often fails due to improper hyperparameters that ignore system limitations, causing crashes and inefficiency.
-        </p>
-    </div>
-    <div class="glass p-8 rounded-3xl">
-        <h2 class="text-xl font-bold mb-2">Gap</h2>
-        <p class="text-slate-400">
-            No system dynamically adapts hyperparameters based on hardware.
-        </p>
-    </div>
+
+<div class="glass p-10 rounded-3xl border-l-4 border-blue-600">
+<h2 class="text-3xl font-bold mb-4">Problem Statement</h2>
+
+<p class="text-slate-400">
+Machine learning training becomes inefficient due to improper hyperparameter selection that does not consider system limitations. This leads to crashes, slow convergence, and unstable execution.
+</p>
+</div>
+
+<div class="space-y-6">
+
+<div class="glass p-6 rounded-2xl border-r-4 border-blue-500">
+<h3 class="text-blue-400 text-xs font-bold uppercase mb-2">Literature Review</h3>
+<p class="text-slate-400 text-sm">
+Existing AutoML systems optimize accuracy but ignore hardware constraints.
+</p>
+</div>
+
+<div class="glass p-6 rounded-2xl border-r-4 border-purple-500">
+<h3 class="text-purple-400 text-xs font-bold uppercase mb-2">Research Gap</h3>
+<p class="text-slate-400 text-sm">
+No system dynamically adapts hyperparameters based on device capability.
+</p>
+</div>
+
+</div>
 </section>
 
-<section id="methodology" class="space-y-8">
-    <h2 class="text-3xl text-center font-bold">Methodology</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+<!-- METHODOLOGY -->
+<section id="methodology" class="space-y-10">
+<h2 class="text-4xl text-center font-bold">System Methodology</h2>
 
-        <div class="glass p-6 rounded-2xl text-center">
-            <i class="fas fa-desktop text-blue-400 text-2xl mb-2"></i>
-            <p>Device Profiling</p>
-        </div>
+<div class="grid md:grid-cols-3 gap-6">
 
-        <div class="glass p-6 rounded-2xl text-center">
-            <i class="fas fa-brain text-purple-400 text-2xl mb-2"></i>
-            <p>Optimization Engine</p>
-        </div>
+<div class="glass p-6 rounded-2xl text-center">
+<h3 class="font-bold mb-2">Dataset</h3>
+<p class="text-slate-400 text-sm">
+EMNIST/MNIST dataset of 28x28 grayscale digits, normalized and split.
+</p>
+</div>
 
-        <div class="glass p-6 rounded-2xl text-center">
-            <i class="fas fa-chart-line text-green-400 text-2xl mb-2"></i>
-            <p>Live Training</p>
-        </div>
+<div class="glass p-6 rounded-2xl text-center">
+<h3 class="font-bold mb-2">Model</h3>
+<p class="text-slate-400 text-sm">
+TensorFlow neural network trained with dynamically optimized hyperparameters.
+</p>
+</div>
 
-    </div>
+<div class="glass p-6 rounded-2xl text-center">
+<h3 class="font-bold mb-2">Execution</h3>
+<p class="text-slate-400 text-sm">
+Training with real-time streaming metrics via WebSockets.
+</p>
+</div>
+
+</div>
 </section>
 
-<!-- NEW WORKFLOW SECTION -->
-<section class="space-y-10">
-    <h2 class="text-3xl text-center font-bold">System Workflow</h2>
-
-    <div class="glass p-10 rounded-3xl grid md:grid-cols-6 text-center text-xs gap-4">
-        <div>User Input</div>
-        <div>Device Profiling</div>
-        <div>Optimization</div>
-        <div>Training</div>
-        <div>Live Metrics</div>
-        <div>Results</div>
-    </div>
-</section>
-
+<!-- RESULTS -->
 <section id="results" class="glass p-10 rounded-3xl">
-    <h2 class="text-3xl text-center font-bold mb-10">Results</h2>
+<h2 class="text-3xl text-center font-bold mb-10">Results & Analysis</h2>
 
-    <canvas id="resultsChart"></canvas>
+<div class="grid md:grid-cols-2 gap-10">
 
-    <p class="text-slate-400 mt-6 text-center">
-        System reduces crashes and improves efficiency across devices.
-    </p>
+<div class="glass p-4 rounded-xl">
+<p class="text-center text-xs text-slate-400 mb-2">Accuracy Curve</p>
+<img src="accuracy.png" class="rounded-lg">
+</div>
+
+<div class="glass p-4 rounded-xl">
+<p class="text-center text-xs text-slate-400 mb-2">Loss Curve</p>
+<img src="loss.png" class="rounded-lg">
+</div>
+
+</div>
+
+<div class="mt-10 glass p-4 rounded-xl">
+<p class="text-center text-xs text-slate-400 mb-2">Confusion Matrix</p>
+<img src="confusion.png" class="rounded-lg mx-auto">
+</div>
+
+<p class="mt-6 text-slate-400 text-center max-w-xl mx-auto">
+The model achieves high accuracy while maintaining stable convergence. The system ensures efficient and crash-free training across different hardware configurations.
+</p>
+
 </section>
 
+<!-- TEAM -->
 <section id="team" class="text-center">
-    <p class="text-xl font-bold">Manalee Tamrakar</p>
+<h2 class="text-xs text-slate-500 mb-4">Academic Credits</h2>
+
+<p class="text-xl font-bold">Manalee Tamrakar</p>
+<p class="text-sm text-slate-400">23FE10CSE00507</p>
 </section>
 
 </main>
@@ -123,17 +191,6 @@ function startTimer(){
         `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
     },1000);
 }
-
-new Chart(document.getElementById('resultsChart'), {
-    type: 'bar',
-    data: {
-        labels: ['Unoptimized', 'Optimized'],
-        datasets: [{
-            data: [60, 95],
-            backgroundColor: ['#1e293b','#3b82f6']
-        }]
-    }
-});
 </script>
 
 </body>
