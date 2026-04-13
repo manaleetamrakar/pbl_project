@@ -30,7 +30,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* FIXED TIMER */
 #timerContainer {
     background: #ffffff;
     color: #020617;
@@ -51,7 +50,6 @@ body {
 
 <!-- NAVBAR -->
 <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
-
 <div class="flex items-center gap-4">
     <div class="bg-white p-1 rounded flex items-center justify-center shadow-md" style="height:48px;width:48px;">
         <img src="mujlogo.png" class="h-full w-auto object-contain">
@@ -68,10 +66,9 @@ body {
     <a href="#results">Results</a>
     <a href="#team">Team</a>
 </div>
-
 </nav>
 
-<main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
+<main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-24">
 
 <!-- TITLE -->
 <section class="text-center">
@@ -82,37 +79,37 @@ Intelligent Hyperparameter Optimizer
 </h1>
 
 <p class="text-slate-400 mt-6 max-w-2xl mx-auto italic border-l-2 border-blue-500 pl-6 text-left">
-This project presents a system that dynamically optimizes machine learning hyperparameters based on hardware capabilities, ensuring efficient, stable, and crash-free training.
+This project presents a hardware-aware system that dynamically optimizes machine learning hyperparameters based on device capabilities, ensuring efficient, stable, and crash-free training.
 </p>
 </section>
 
 <!-- PROBLEM -->
-<section id="problem" class="grid md:grid-cols-2 gap-12">
-
+<section id="problem" class="space-y-6">
+<h2 class="text-4xl font-extrabold uppercase">Problem Statement</h2>
 <div class="glass p-10 rounded-3xl border-l-4 border-blue-600">
-<h2 class="text-3xl font-extrabold uppercase tracking-tight mb-4">Problem Statement</h2>
-
-<p class="text-slate-400">
-Machine learning training becomes inefficient due to improper hyperparameter selection that does not consider system limitations. This leads to crashes, slow convergence, and unstable execution.
+<p class="text-slate-400 text-lg leading-relaxed">
+Machine learning models rely heavily on hyperparameter tuning to achieve optimal performance. However, traditional approaches use fixed configurations without considering hardware limitations. This leads to inefficient training, slow convergence, and system crashes due to memory constraints. Therefore, an intelligent system is required to dynamically adjust training parameters based on available resources.
 </p>
 </div>
+</section>
 
-<div class="space-y-6">
-
-<div class="glass p-6 rounded-2xl border-r-4 border-blue-500">
-<h3 class="text-blue-400 text-xs font-bold uppercase mb-2">Literature Review</h3>
-<p class="text-slate-400 text-sm">
-Existing AutoML systems optimize accuracy but ignore hardware constraints.
+<!-- LITERATURE -->
+<section class="space-y-6">
+<h2 class="text-4xl font-extrabold uppercase">Literature Review</h2>
+<div class="glass p-10 rounded-3xl border-l-4 border-blue-500">
+<p class="text-slate-400 text-lg leading-relaxed">
+Existing hyperparameter optimization methods such as Grid Search, Random Search, and AutoML frameworks primarily focus on maximizing model accuracy. However, these approaches do not consider system hardware constraints and assume access to high-performance computing resources, making them inefficient for practical use.
 </p>
 </div>
+</section>
 
-<div class="glass p-6 rounded-2xl border-r-4 border-purple-500">
-<h3 class="text-purple-400 text-xs font-bold uppercase mb-2">Research Gap</h3>
-<p class="text-slate-400 text-sm">
-No system dynamically adapts hyperparameters based on device capability.
+<!-- GAP -->
+<section class="space-y-6">
+<h2 class="text-4xl font-extrabold uppercase">Research Gap</h2>
+<div class="glass p-10 rounded-3xl border-l-4 border-purple-500">
+<p class="text-slate-400 text-lg leading-relaxed">
+Current solutions lack a hardware-aware mechanism that dynamically adapts hyperparameters based on system specifications. This results in inefficient resource utilization and unstable training. Addressing this gap is essential to ensure reliable and efficient machine learning workflows.
 </p>
-</div>
-
 </div>
 </section>
 
@@ -125,21 +122,25 @@ No system dynamically adapts hyperparameters based on device capability.
 <div class="glass p-6 rounded-2xl text-center">
 <h3 class="font-bold mb-2">Dataset</h3>
 <p class="text-slate-400 text-sm">
-MNIST/EMNIST datasets with grayscale images used for training and evaluation.
+Supports MNIST, EMNIST, and custom datasets. Data is normalized and processed for training.
 </p>
 </div>
 
 <div class="glass p-6 rounded-2xl text-center">
 <h3 class="font-bold mb-2">Model</h3>
 <p class="text-slate-400 text-sm">
-TensorFlow neural network trained with dynamically optimized hyperparameters.
+Neural network built using TensorFlow with dynamic hyperparameter configuration.
 </p>
 </div>
 
 <div class="glass p-6 rounded-2xl text-center">
 <h3 class="font-bold mb-2">Execution</h3>
 <p class="text-slate-400 text-sm">
-Training with real-time streaming metrics via WebSockets.
+Hardware-aware optimization with real-time training metrics using WebSockets.
+<br><br>
+<a href="https://github.com/manaleetamrakar/federated-learning-hyperparameter-tuning" target="_blank" class="text-blue-400 underline">
+View GitHub Repository
+</a>
 </p>
 </div>
 
@@ -170,9 +171,18 @@ Training with real-time streaming metrics via WebSockets.
 </div>
 
 <p class="mt-6 text-slate-400 text-center max-w-xl mx-auto">
-The model achieves high accuracy while maintaining stable convergence and efficient resource utilization.
+The model demonstrates stable convergence and consistent learning behavior. Accuracy improves steadily while loss decreases smoothly across epochs. The confusion matrix highlights strong classification performance with minimal errors. The system effectively prevents crashes and achieves accuracy between 90% and 96%.
 </p>
+</section>
 
+<!-- CONCLUSION -->
+<section class="space-y-6">
+<h2 class="text-4xl font-extrabold uppercase">Conclusion</h2>
+<div class="glass p-10 rounded-3xl border-l-4 border-green-500">
+<p class="text-slate-400 text-lg leading-relaxed">
+The Intelligent Hyperparameter Optimizer successfully improves training efficiency by adapting hyperparameters based on hardware capabilities. It prevents system crashes, ensures stable convergence, and provides a practical solution for real-world machine learning workflows.
+</p>
+</div>
 </section>
 
 <!-- TEAM -->
@@ -196,7 +206,6 @@ Academic Credits
 </div>
 
 </div>
-
 </section>
 
 </main>
